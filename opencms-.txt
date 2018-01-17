@@ -1,0 +1,12 @@
+
+Administrator login info
+
+Username: Admin
+
+Password: admin
+
+You should change the Admin password as soon as possible! Do this in the OpenCms workplace that you can access through the "Advanced" context menu in the toolbar.
+
+Note that for this demo the users Author, Editor, Gallator and Templator have been created as well. You should also change their passwords or disable / delete these users completely. 
+
+http://localhost:8090/opencms/opencms/system/login

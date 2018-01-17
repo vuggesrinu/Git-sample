@@ -1,0 +1,51 @@
+inrapoker tomcat setup 
+
+
+<Connector port="8011" protocol="AJP/1.3" redirectPort="8444"/>
+<Server port="7011" shutdown="SHUTDOWN">
+
+AltairURI altair://192.175.96.103:5025
+
+
+JMXPORT=54061
+
+SERVICE_PORT=53456
+#SERVICE_PORT=54456
+
+
+ indeliriosetup 
+ 
+ /home/redin/www/bin/tomcat-java-opts-indelirio.sh
+ 
+ <Connector port="8012" protocol="AJP/1.3" redirectPort="8444"/>
+ 
+ /home/redin/www/bin/tomcat-java-opts-funtime.sh
+ 
+ <Connector port="7014" protocol="AJP/1.3" redirectPort="8444"/>
+ 
+ http://cms-redin.undertesting.com
+ 
+ Using username "sunil".
+Authenticating with public key "rsa-key-20160922" from agent
+Last login: Tue Aug 22 22:34:49 2017 from 183.83.215.22
+[sunil@rv-app01 ~]$ sudo su
+[root@rv-app01 sunil]# cd /etc/nagios/conf.d/
+[root@rv-app01 conf.d]# ls
+\            funtimecasino.cfg   pokeraa.cfg     rapoker-srv1.cfg  rdpoker.cfg     riverpoker.cfg-20170220
+bigchip.cfg  palpitas-app01.cfg  pokerjacks.cfg  rapoker-srv2.cfg  riverpoker.cfg  StarServer2.cfg
+[root@rv-app01 conf.d]# vi pokerjacks.cfg
+[root@rv-app01 conf.d]# vi pokeraa.cfg
+[root@rv-app01 conf.d]# vi pokerjacks.cfg
+[root@rv-app01 conf.d]# vi StarServer2.cfg
+[root@rv-app01 conf.d]# vi pokeraa.cfg
+[root@rv-app01 conf.d]# vi rdpoker.cfg
+[root@rv-app01 conf.d]# vi StarServer2.cfg
+[root@rv-app01 conf.d]# /etc/init.d/nagios checkconfig
+Running configuration check... OK.
+[root@rv-app01 conf.d]# service nagios restart
+Running configuration check...done.
+Stopping nagios: ..done.
+Starting nagios: done.
+[root@rv-app01 conf.d]# mv pokerjacks.cfg pokerjack
+
+

@@ -1,0 +1,49 @@
+
+  954  su - raios
+  955  su - mohan
+  956  su - raios
+  957  su - mohan
+  958  cat /etc/httpd/jk-workers.properties
+  959  cat /etc/httpd/raios/sharksmex.conf
+  960  df -h
+  961  pwd
+  962  /etc/init.d/mysqld stop
+  963  cd /var/lib/
+  964  ls -ltr
+  965  mv mysql/ mysql-original
+  966  unzip /tmp/mysql-old.zip
+  967  ls -ltr
+  968  mv mysql-original mysql
+  969  /etc/init.d/mysqld start
+  970  mysql
+  971  history |grep mysql
+  972   mysql -pCer3sidyb34
+  973  ls
+  974  ls -ltr
+  975  cd mysql
+  976  ls
+  977  cd mysql
+  978  ls
+  979  cd ../
+  980  ls -ltr
+  981  pwd
+  982  cd ../
+  983  ls -ltr
+  984  /etc/init.d/mysqld stop
+  985  mv mysql mysql-original
+  986  ls -ltr
+  987  mv mysql-old mysql
+  988  /etc/init.d/mysqld start
+  989  mysql
+  990  tail -f /var/log/mysqld.log
+  991  chown -R mysql:mysql mysql
+  992  /etc/init.d/mysqld start
+  993   mysql -pCer3sidyb34
+  994  mysqldump  -pCer3sidyb34 opencmsraios |gzip > opencmsraios.sql.gz
+  995  /etc/init.d/mysqld stop
+  996  ls -ltr
+  997  mv mysql  mysql-old
+  998  mv mysql-original mysql
+  999  /etc/init.d/mysqld start
+ 1000  pwd
+ 1001  history

@@ -1,0 +1,114 @@
+<a href="/nagiosgraph/cgi-bin/show.cgi?host=rapoker-srv1&service=RegistrationsCount" > <h2>Rapoker Registrations Count</h2>
+  <img src="/nagiosgraph/cgi-bin/showgraph.cgi?host=rapoker-srv1&service=RegistrationsCount&db=RegistrationsCount&rrdopts=%20-snow-118800%20-enow-0" align="middle" alt="Rapoker Registrations Count"></a>
+
+
+ <a href="/nagiosgraph/cgi-bin/show.cgi?host=rdpoker-app01&service=RegistrationsCount" > <h2>Rdpoker Registrations Count</h2>
+  <img src="/nagiosgraph/cgi-bin/showgraph.cgi?host=rdpoker-app01&service=RegistrationsCount&db=RegistrationsCount&rrdopts=%20-snow-118800%20-enow-0" align="middle" alt="Rdpoker Registrations Count"></a>
+
+
+ <a href="/nagiosgraph/cgi-bin/show.cgi?host=pokeraa-app01&service=RegistrationsCount" > <h2>jiogames Registrations Count</h2>
+  <img src="/nagiosgraph/cgi-bin/showgraph.cgi?host=riverpoker-srv01&service=RegistrationsCount&db=RegistrationsCount&rrdopts=%20-snow-118800%20-enow-0" align="middle" alt="jiogames Registrations Count"></a>
+
+
+  
+  SERVER_URL/internal/onlinestats.jsp"
+  
+  www.royaldiamondpoker.net/internal/onlinestats.jsp
+  www.royaldiamondpoker.com/internal/onlinestats.jsp
+  
+  
+  
+  http://eagleeye.agamingcompany.in/nagiosgraph/cgi-bin/showgraph.cgi?host=riverpoker-srv01&service=RegistrationsCount&db=RegistrationsCount%2Ccrit&db=RegistrationsCount%2Cdata&db=RegistrationsCount%2Cwarn&rrdopts=%20-snow-118800%20-enow-0
+  
+  
+  
+  
+  http://eagleeye.agamingcompany.in/nagiosgraph/cgi-bin/show.cgi?host=riverpoker-srv01&service=RegistrationsCount
+  
+  http://eagleeye.agamingcompany.in/nagiosgraph/cgi-bin/showgraph.cgi?host=pokeraa-app01&service=RegistrationsCount&db=RegistrationsCount%2Ccrit&db=RegistrationsCount%2Cdata&db=RegistrationsCount%2Cwarn&rrdopts=%20-snow-118800%20-enow-0
+  
+  
+  
+  http://eagleeye.agamingcompany.in/nagiosgraph/cgi-bin/showgraph.cgi?host=pokeraa-app01&service=JioGames%20ActivePlayers&db=ActivePlayers&rrdopts=%20-snow-118800%20-enow-0
+  
+  
+  http://eagleeye.agamingcompany.in/nagiosgraph/cgi-bin/show.cgi?host=pokeraa-app01&service=JioGames%20ActivePlayers
+  
+  
+    http://eagleeye.agamingcompany.in/nagiosgraph/cgi-bin/show.cgi?host=pokeraa-app01&service=JioGames%20ActivePlayers
+
+  http://eagleeye.agamingcompany.in/nagiosgraph/cgi-bin/showgraph.cgi?host=StarServer2&service=playersCount&db=playersCount%2Ccrit&db=playersCount%2Cdata&db=playersCount%2Cwarn&rrdopts=%20-snow-118800%20-enow-0
+  
+  http://www.myjiogames.com/AGaming/pointTransfer/getUserCreationCount/Admin
+  
+  
+  
+  
+  
+  http://eagleeye.agamingcompany.in/nagiosgraph/cgi-bin/show.cgi?host=pokeraa-app01&service=JiogamesUserCreationCount/Admin
+  
+  http://eagleeye.agamingcompany.in/nagiosgraph/cgi-bin/showgraph.cgi?host=pokeraa-app01&service=RegistrationsCount&db=UserCreationCount/Admin%2Ccrit&db=UserCreationCount/Admin%2Cdata&db=UserCreationCount/Admin%2Cwarn&rrdopts=%20-snow-118800%20-enow-0
+  
+  
+  
+  
+  
+END_POINT="https://www.myjiogames.com/AGaming/pointTransfer/getOnlinePlayerCount
+
+
+www.fungameasia.com/AGaming/pointTransfer/getOnlinePlayerCount
+
+www.royaldiamondpoker.net/AGaming/pointTransfer/getOnlinePlayerCount
+
+www.royaldiamondpoker.net/axis/services/CgSlaveGamingServicegetOnlinePlayerCountwsdl,
+
+
+
+www.pjacks.net/AGaming/pointTransfer/getOnlinePlayerCount
+
+<a href="/nagiosgraph/cgi-bin/show.cgi?host=pokeraa-app01&service=RegistrationsCount" > <h2>JiogamesUserCreationCount/Adminh2>
+  <img src="/nagiosgraph/cgi-bin/showgraph.cgi?host=riverpoker-srv01&service=UserCreationCount/Admin&db=UserCreationCount/Admint&rrdopts=%20-snow-118800%20-enow-0" align="middle" alt="JiogamesUserCreationCount/Admin"></a>
+  
+  
+  
+  
+  
+  /etc/nagios/conf.d/rdpoker.cfg
+  
+define service{
+        use                     linux-service,graphed-service
+        host_name               rdpoker-app01
+        service_description     ActiveTables
+        check_command           check_poker_stats_v1!www.royaldiamondpoker.com!ActiveTables!0!0
+        }
+
+
+define service{
+        use                     linux-service,graphed-service
+        host_name               rdpoker-app01
+        service_description     ActivePlayers
+        check_command           check_poker_stats_v1!www.royaldiamondpoker.com!ActivePlayers!0!0
+        }
+
+
+
+define service{
+        use                     linux-service,graphed-service
+        host_name               rdpoker-app01
+        service_description     RegistrationsCount
+        check_command           check_poker_stats_v1!www.royaldiamondpoker.com!RegistrationsCount!0!0
+        }
+
+www.royaldiamondpoker.com
+
+http://www.royaldiamondpoker.com/
+
+  
+  
+  
+  
+  
+  
+  
+  
+  http://eagleeye.agamingcompany.in/nagiosgraph/cgi-bin/showgraph.cgi?host=rdpoker-app01&service=ActivePlayers&db=ActivPlayers&db=ActivePlayers&rrdopts=%20-snow-118800%20-enow-0
