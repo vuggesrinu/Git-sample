@@ -123,3 +123,4 @@ Shutting down ntpd:                                        [  OK  ]
 [root@mohan ~]# date
 Mon Sep 18 03:42:21 EDT 2017
 
+mysql to be added
