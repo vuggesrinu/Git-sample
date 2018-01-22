@@ -312,3 +312,29 @@ PGLOG=/var/lib/pgsql/9.2/pgstartup_pokeraa.log
 # Log file for pg_upgrade
 PGUPLOG=/var/lib/pgsql/$PGMAJORVERSION/pgupgrade_pokeraa.log
 
+
+
+
+for myjiogames  admin user update in live db
+
+
+do this thing if i'm not available at any time
+select * from adminuser where status ='Inactive';
+result:
+ id |  adminid   | adminname |  balance   |      createdon      |                                                                           password
+                                  | permissiongroup | pin  |  status
+----+------------+-----------+------------+---------------------+----------------------------------------------------------------------------------------------------------------------------
+----------------------------------+-----------------+------+----------
+ 11 | JAIKRISHNA | Krishna   | 5116262.00 | 2017-10-09 01:04:00 | 1000:5b42403535376539613465:8053f44b4e781fd9df6bb96ae4376e958824f9f59882bf826fec63d42a00347ea97cd3cd595647ee8e203eace58288c
+557a4ead64cb9c6a24d13fa0adfbc2902 | Admin           | 7421 | Inactive
+ update adminuser set status='Active' where id= 11;
+result:
+UPDATE 1
+ select * from loginfailattempts where loginname ='JAIKRISHNA';
+   id    | loginname  | nofattempts
+---------+------------+-------------
+ 3698066 | JAIKRISHNA |          11
+(1 row)
+ update loginfailattempts set nofattempts=0 where id = 3698066;
+UPDATE 1
+
