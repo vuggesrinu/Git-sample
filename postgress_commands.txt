@@ -162,7 +162,12 @@ psql -U postgres -p 5449 < /home/srinivas/REDIN/redin_DB.sql > temp.txt to get c
 
 
  ls -lS | less to check apache log size 
-  pg_dumpall -U postgres  -p 5434  >  /home/sunil/pg_bak_20170926.sql
+ 
+ 
+ 
+ 
+ 
+ pg_dumpall -U postgres  -p 5434  >  /home/sunil/pg_bak_20170926.sql
  
  
  pg_dumpall -U postgres  -p 5432  >  /home/gameking/pg_bak_20170928.sql
@@ -231,7 +236,34 @@ pg_dumpall -U postgres  -p 5432  >  /home/gameking/pg_bak_20171008.sql
    
    psql -U postgres  -p 5543  <  /home/sunil/jio/jio_db_20171214.sql
    
+   
+   pg_dumpall -U postgres  -p 5434  >  /home/sunil/pg_bak_20171219.sql
+   
+   psql -U postgres  -p 5544  <  /home/sunil/GAMEKING/gameking_db_20171219.sql
+   
+   pg_dumpall -U postgres  -p 5449  >  /home/sunil/pg_redin_20171222.sql
+   
+   psql -U postgres  -p 5458  <  /home/sunil/REDIN/pg_redin_20171222.sql
+   
+   
+   pg_dumpall -U postgres  -p 5434  >  /home/sunil/pg_bak_20171226.sql
+   
+   
+   pg_dumpall -U postgres  -p 5434  >  /home/sunil/pg_bak_20180102.sql
+   
+   
+   psql -U postgres -p 5434 < /home/sunil/pokeraa/pg_bak_20180102.sql
+   
+   
+   
+   
+   psql -U postgres -p 5546 < /home/sunil/sabong/sabong.sql
+   
+   
+   psql -U postgres -p 5542 < /home/sunil/conflux/conflux_db.sql
+   
    postgres db instance creation
+   
    
    
    
@@ -291,10 +323,50 @@ e | login_prefix
 
 REDIN_INTEGRATION=# update remote_system set name='soulpoker',login='soulpoker',password='soulpoker' where id ='00000000-0000-0036-0000-000000000050';
 
+
+for RED_PERSON db in red demo to update query for currency
+select * from system_option where id ='00000000-0000-0b88-0000-000000000001';
+update system_option set class_name ='java.lang.String', value='BRL' where id = '00000000-0000-0b88-0000-000000000001';
+
+
+
+pg_dump -U postgres -p 5439 -d RED_TOURNEY_LOBBY1 -t task > touranment_task.sql
+\c  RED_TOURNEY_LOBBY1
+update task set task_status =5 ;
+
+\c RED_GAME_MODERATOR
+update tournament_settings where synchronized_tourney =false;
+
+
+
+
+
+pg_dump -U postgres -p 5439 -d RED_TOURNEY_LOBBY1 -t task > touranment_task.sql
+\c  RED_TOURNEY_LOBBY1
+update task set task_status =5 ;
+
+\c RED_GAME_MODERATOR
+update tournament_settings where synchronized_tourney =false;
+
+
+
+
 To update string
 
 select id, adminid,status from adminuser ;
 update adminuser set status = 'Active' where id =13;
+
+
+create database instaces in windows system
+
+initdb -D newfoldername -U username 
+
+pg_ctl -D newfoldername start
+
+change port numbers in postgressql.conf in created  new folder  
+give autherization permissions in pg_hba.conf file same folder
+
+
 
 
 
@@ -315,12 +387,18 @@ PGUPLOG=/var/lib/pgsql/$PGMAJORVERSION/pgupgrade_pokeraa.log
 
 
 
+
+
+
+
+
+
 for myjiogames  admin user update in live db
 
 
 do this thing if i'm not available at any time
 select * from adminuser where status ='Inactive';
-result:
+result: 
  id |  adminid   | adminname |  balance   |      createdon      |                                                                           password
                                   | permissiongroup | pin  |  status
 ----+------------+-----------+------------+---------------------+----------------------------------------------------------------------------------------------------------------------------
@@ -338,3 +416,28 @@ UPDATE 1
  update loginfailattempts set nofattempts=0 where id = 3698066;
 UPDATE 1
 
+
+
+
+
+
+
+
+
+
+grep 'Bet rejected!!.You have already placed ' requestResponse.log
+2018-02-02 10:37:09,719 [nioEventLoopGroup-3-2]  TRACE c.a.g.g.d.ResponseDispatcher  Response PlayerId  : 6632095  {"commandName":"ACKNOWLEDGE","ackMessage":"Bet rejected!!.You have already placed BET for this Round.","ackCode":"game.bet.rejected.alreadyPlaced","gameId":2}
+
+in jiogames datbase
+
+
+
+select login_name from player where id = 6632095;
+
+
+for our refference
+
+select id,game_id,game_status,start_date,bet_amount,player_id from player_game_bind where start_date < '2018-02-02 11:00:00'  and game_status='NONE' and player_id =
+
+To game id and game display name 
+select game_id, display_name from game_params;
