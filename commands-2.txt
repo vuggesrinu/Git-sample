@@ -1,0 +1,153 @@
+
+  954  su - raios
+  955  su - mohan
+  956  su - raios
+  957  su - mohan
+  958  cat /etc/httpd/jk-workers.properties
+  959  cat /etc/httpd/raios/sharksmex.conf
+  960  df -h
+  961  pwd
+  962  /etc/init.d/mysqld stop
+  963  cd /var/lib/
+  964  ls -ltr
+  965  mv mysql/ mysql-original
+  966  unzip /tmp/mysql-old.zip
+  967  ls -ltr
+  968  mv mysql-original mysql
+  969  /etc/init.d/mysqld start
+  970  mysql
+  971  history |grep mysql
+  972   mysql -pCer3sidyb34
+  973  ls
+  974  ls -ltr
+  975  cd mysql
+  976  ls
+  977  cd mysql
+  978  ls
+  979  cd ../
+  980  ls -ltr
+  981  pwd
+  982  cd ../
+  983  ls -ltr
+  984  /etc/init.d/mysqld stop
+  985  mv mysql mysql-original
+  986  ls -ltr
+  987  mv mysql-old mysql
+  988  /etc/init.d/mysqld start
+  989  mysql
+  990  tail -f /var/log/mysqld.log
+  991  chown -R mysql:mysql mysql
+  992  /etc/init.d/mysqld start
+  993   mysql -pCer3sidyb34
+  994  mysqldump  -pCer3sidyb34 opencmsraios |gzip > opencmsraios.sql.gz
+  995  /etc/init.d/mysqld stop
+  996  ls -ltr
+  997  mv mysql  mysql-old
+  998  mv mysql-original mysql
+  999  /etc/init.d/mysqld start
+ 1000  pwd
+ 1001  history
+
+ file permissions
+ 
+ 
+ 
+ chmod 400 mydoc.txt read by owner
+chmod 040 mydoc.txt read by group
+chmod 004 mydoc.txt read by anybody (other)
+chmod 200 mydoc.txt write by owner
+chmod 020 mydoc.txt write by group
+chmod 002 mydoc.txt write by anybody
+chmod 100 mydoc.txt execute by owner
+chmod 010 mydoc.txt execute by group
+chmod 001 mydoc.txt execute by anybody
+
+
+7 = 4+2+1 (read/write/execute)
+6 = 4+2 (read/write)
+5 = 4+1 (read/execute)
+4 = 4 (read)
+3 = 2+1 (write/execute)
+2 = 2 (write)
+1 = 1 (execute)
+
+chmod 666 mydoc.txt read/write by anybody! (the devil loves this one!)
+chmod 755 mydoc.txt rwx for owner, rx for group and rx for the world
+chmod 777 mydoc.txt read, write, execute for all! (may not be the best plan in the world...)
+
+
+
+
+
+
+
+
+
+
+
+
+
+passwords
+
+
+pramod.padamati
+Letzdoit1046
+
+latheesh8989@gmail.com
+Lath33sh@123
+
+
+veeru.srinivas
+Am@ravath1
+Myjiogames
+1231304/Kbagh2017
+www.shirnikhamei.com
+
+
+
+
+
+
+
+
+
+
+pidof httpd | wc -w
+2011-02-24 16:46:46
+User: eneko
+Functions: pidof wc
+-1
+Up
+Down
+Count httpd processes
+
+Returns the number of running httpd processes
+
+
+
+
+
+
+pgrep -c 'httpd|apache2'
+2011-02-24 18:03:00
+User: linuxrawkstar
+Tags: httpd
+-1
+Up
+Down
+Count httpd processes
+
+this version is going to work on redhat/centos/suse AND ubuntu/debian systems
+
+
+
+
+
+
+Try using netstat program with the -l flag to get a list of listening process. You probably want to run it with sudo so that you can use the -p flag to get process PIDs. You might also want the -t flag to only show tcp sockets instead of tcp and udp. Sometimes the -n flag is nice to show only port numbers and IPs without resolving them to services and names.
+
+After that it's a matter of greping for just your apache process and then extracting the PID from the output columns:
+
+sudo netstat -lntp | grep httpd | awk -F '[/ ]*' '{print $7}'
+
+
