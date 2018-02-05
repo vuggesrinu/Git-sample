@@ -441,3 +441,39 @@ select id,game_id,game_status,start_date,bet_amount,player_id from player_game_b
 
 To game id and game display name 
 select game_id, display_name from game_params;
+
+[10:09, 2/4/2018] Suresh Mendu: select id,game_id,game_status,start_date,bet_amount,player_id from player_game_bind where start_date < '2018-02-02 19:10:00'  and game_status='BET';
+[10:11, 2/4/2018] Suresh Mendu: update player_game_bind set game_status='NONE' where id =
+[10:14, 2/4/2018] Suresh Mendu: -----------------------
+[10:14, 2/4/2018] Suresh Mendu: -------------------
+[10:14, 2/4/2018] Suresh Mendu: jiogames=# select id,game_id,game_status,start_date,bet_amount,player_id from player_game_bind where start_date < '2018-02-04 10:10:00'  and game_status='BET';
+   id    | game_id | game_status |       start_date        | bet_amount | player_id
+---------+---------+-------------+-------------------------+------------+-----------
+ 4272651 |       2 | BET         | 2018-02-03 19:57:08.407 |            |   4248239
+ 6632505 |       2 | BET         | 2018-02-03 15:18:08.755 |            |   6632095
+ 8710252 |       2 | BET         | 2018-02-02 19:18:09.41  |            |   8678474
+ 5444573 |       2 | BET         | 2018-02-03 18:30:09.567 |            |   5436639
+ 4482354 |       2 | BET         | 2018-02-03 19:57:08.873 |            |   4396600
+ 3629025 |       2 | BET         | 2018-02-03 15:18:04.273 |            |   3376225
+ 7513367 |       2 | BET         | 2018-02-03 15:13:09.781 |            |   7406429
+ 4993895 |       2 | BET         | 2018-02-02 20:29:09.922 |            |   4955174
+(8 rows)
+
+jiogames=# update player_game_bind set game_status='NONE' where id = 4272651;
+UPDATE 1
+jiogames=# update player_game_bind set game_status='NONE' where id = 6632505;
+UPDATE 1
+jiogames=# update player_game_bind set game_status='NONE' where id = 8710252;
+UPDATE 1
+jiogames=# update player_game_bind set game_status='NONE' where id =  5444573 |       2 | BET         | 2018-02-03 18:30:09.567 |            |   5436639
+jiogames-# ^C
+jiogames=# update player_game_bind set game_status='NONE' where id = 4482354;
+UPDATE 1
+jiogames=# update player_game_bind set game_status='NONE' where id = 3629025;
+UPDATE 1
+jiogames=# update player_game_bind set game_status='NONE' where id = 7513367;
+UPDATE 1
+jiogames=# update player_game_bind set game_status='NONE' where id = 4993895;
+UPDATE 1
+jiogames=#
+[15:45, 2/4/2018] Suresh Mendu:
