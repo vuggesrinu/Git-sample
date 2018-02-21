@@ -124,3 +124,7 @@ Shutting down ntpd:                                        [  OK  ]
 Mon Sep 18 03:42:21 EDT 2017
 
 mysql to be added
+
+
+
+ netstat -na |grep 8810 |grep ESTA |awk '{print $5}' |cut -d: -f4 |sort |uniq -c |sort -n
