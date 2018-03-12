@@ -52,4 +52,16 @@ loginname  it@undertesting.com
 password   mohan7161
 
 
-incapsula added
+user name it@snc2016.com
+pass Czar@99089
+ovh di
+
+Riverpoker -  live Backoffice credentials
+
+username    latheesh       
+ password   L@th33$H4!e
+
+ 
+ Your VPS
+IP address	server type	VNC IP and port	VNC password	user name	password	operating system
+5.189.136.119	VPS XL (no setup)	5.189.190.121:63047	KaY3CyumR1x9wNBi	root	KaY3CyumR1x9wNBi	Cent OS 6 (64 Bit)
