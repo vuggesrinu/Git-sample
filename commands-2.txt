@@ -151,3 +151,21 @@ After that it's a matter of greping for just your apache process and then extrac
 sudo netstat -lntp | grep httpd | awk -F '[/ ]*' '{print $7}'
 
 
+
+
+to check free  memory in linux server 
+
+free -h
+
+example :
+
+[sunil@ne-r052-152cl ~]$ free -h
+             total       used       free     shared    buffers     cached
+Mem:           62G        59G       3.0G       468K       455M       9.8G
+-/+ buffers/cache:        49G        13G
+Swap:         4.0G       3.8G       179M
+[sunil@ne-r052-152cl ~]$
+
+
+
+
