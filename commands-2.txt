@@ -169,3 +169,209 @@ Swap:         4.0G       3.8G       179M
 
 
 
+this below 
+command for no of connections of  user limits 
+
+exaamplea
+
+
+[sunil@ne-r038-312cl ~]$ ps -u sabong -L | wc  -l
+62
+[sunil@ne-r038-312cl ~]$ ps -u jiogames -L | wc  -l
+140
+[sunil@ne-r038-312cl ~]$ ps -u crickfan -L | wc  -l
+1025
+
+
+[sunil@ne-r038-312cl ~]$ ps -u pokeraa -L | wc  -l
+1
+[sunil@ne-r038-312cl ~]$ sudo su - pokeraa
+[pokeraa@ne-r038-312cl ~]$ ulimit
+unlimited
+[pokeraa@ne-r038-312cl ~]$ ulimit -n
+1000000
+[pokeraa@ne-r038-312cl ~]$ ulimit -sn
+-bash: ulimit: n: invalid number
+[pokeraa@ne-r038-312cl ~]$ ulimit -Sn
+1000000
+[pokeraa@ne-r038-312cl ~]$ ulimit -hn
+-bash: ulimit: -h: invalid option
+ulimit: usage: ulimit [-SHacdefilmnpqrstuvx] [limit]
+[pokeraa@ne-r038-312cl ~]$ ulimit -Hn
+1000000
+[pokeraa@ne-r038-312cl ~]$ vi /etc/security/limits.conf
+[pokeraa@ne-r038-312cl ~]$ vi /etc/security/limits.conf
+[pokeraa@ne-r038-312cl ~]$ ulimit -a
+core file size          (blocks, -c) 4194303
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 257170
+max locked memory       (kbytes, -l) 64
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 1000000
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) 1024
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 32768
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+[pokeraa@ne-r038-312cl ~]$ ulimit -u
+32768
+
+
+
+
+
+A thread dump is a log containing information about currently running threads and processes. It can be useful during troubleshooting when trying to identify exactly when an issue occurs.
+To collect a thread dump from Tomcat on UNIX
+Either:
+
+    Run Tomcat in the foreground. At the command prompt, type $TOMCAT_HOME/bin/catalina.sh.
+    Dump the threads to stdout with Ctrl-\.
+
+or:
+
+    Run Tomcat in the background.
+    Type kill -s SIGQUIT <process id> and press Enter.
+
+Look in catalina.out for the thread dumps.
+Parent topic: Troubleshooting Tools 
+
+
+
+
+
+
+
+List of commands determine system info/resources/partitions/process in Ubuntu Linux
+Published in
+Posted by Meilin in General
+
+Following lists frequently-used commands to determine ubuntu info,resources,partitions,network,process and so on.First,open terminal from Applications/Accessories/Terminal and type the commands.
+
+System infomation
+
+uname -a
+
+#kernel/operating system/CPU info in brief.
+head -n 1 /etc/issue
+
+#see the ubuntu version,same to
+cat /etc/issue
+
+hostname
+
+#hostname
+lspci -tv
+
+#list all PCI devices
+lsusb -tv
+
+#list all USB devices
+lsmod
+
+#list loaded kernel modes
+env
+
+#environment variable
+
+Resources
+
+free -m
+
+#see the usage of memory and swap
+df -h
+
+#the usage of partitions
+du -sh
+
+#see the size of the directory in M.
+grep MemTotal /proc/meminfo
+
+#total size of RAM
+grep MemFree /proc/meminfo
+
+#free size of RAM
+uptime
+
+#system running time,users,load average
+cat /proc/loadavg
+
+#load average
+
+Disk and Partition
+
+mount | column -t
+
+#mount info about partitions
+fdisk -l
+
+#list all partitions,need root permission
+swapon -s
+
+#list all swap partitions
+hdparm -i /dev/sda
+
+#list disk info (only for IDE)
+
+Network
+
+ifconfig
+
+#list IP informations
+route -n
+
+#list route tables
+netstat -lntp
+
+#list listening ports
+netstat -antp
+
+#list established links
+
+Process
+
+ps -ef
+
+#list all processes
+top
+
+#list processes and usage of system resource
+
+User
+
+id username
+
+#list the user info.
+last
+
+#list login record
+cut -d: -f1 /etc/passwd
+
+#list all users
+cut -d: -f1 /etc/group
+
+#list all groups
+crontab -l
+
+#list scheduled tasks of current user
+
+Service
+
+chkconfig --list
+
+#list all services
+chkconfig --list | grep on
+
+#list all running services
+Incoming search terms:
+
+    ubuntu process list
+
+No user responded in " List of commands determine system info/resources/partitions/process in Ubuntu Linux "
+
+
+
