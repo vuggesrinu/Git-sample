@@ -18,4 +18,4 @@ cd /home/gameking/tomcat/bin
 
 
 
-Email testing for migration
+Email testing for migration emial changed
