@@ -15,3 +15,7 @@ cd /home/gameking/tomcat/bin
 06-Jul-2017 11:11:16	Stopping timer.
 06-Jul-2017 11:11:16	Build 851969-917509-1310765 completed.
 06-Jul-2017 11:11:16	Finished processing deployment result Deployment of 'release-15' on 'FunGameAsia-Production
+
+
+
+Email testing for migration
